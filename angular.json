@@ -28,9 +28,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/uswds/dist/css/uswds.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/uswds/dist/js/uswds.min.js"
+            ]
           },
           "configurations": {
             "production": {
