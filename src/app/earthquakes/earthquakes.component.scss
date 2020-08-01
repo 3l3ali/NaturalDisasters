@@ -1,14 +1,15 @@
 @import '../../variables';
 
 .form-inline {  
+    margin: 20px 0;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
   }
   .form-inline input {
     vertical-align: middle;
-    margin: 5px 10px 5px 0;
-    padding: 10px 25px;
+    margin: 5px 5px 5px 0;
+    padding: 10px;
   }
   
   .form-inline button {
@@ -21,7 +22,7 @@
   }
   
   .form-inline button:hover {
-    background-color: $natural-blue-hover;
+    background-color: $natural-blue;
   }
   
   @media (max-width: 1020px) {

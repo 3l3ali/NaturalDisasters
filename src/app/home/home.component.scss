@@ -1,0 +1,16 @@
+@import '../../variables';
+
+.home-info-wrapper {
+    padding-bottom: 120px;
+    h2{
+        margin-top: 120px;
+        color: $natural-blue;
+    }
+    p{
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+    a{
+        margin-bottom: 50px;
+    }
+}
