@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .form-inline {  
     display: flex;
     flex-flow: row wrap;
@@ -11,7 +13,7 @@
   
   .form-inline button {
     padding: 10px 20px;
-    background-color: #005ea2;
+    background-color: $natural-blue;
     border: 1px solid #ddd;
     color: white;
     border: 1px solid #ddd;
@@ -19,7 +21,7 @@
   }
   
   .form-inline button:hover {
-    background-color: #024b80;
+    background-color: $natural-blue-hover;
   }
   
   @media (max-width: 1020px) {
