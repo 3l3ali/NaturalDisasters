@@ -1,11 +1,29 @@
 <div class="grid-container">
     <div class="grid-row">
-        <div class="grid-col-12" *ngFor='let earthquake of EarthQuakes'>
+        <div class="grid-col-12">
+            <form #searchForm="ngForm" class="form-inline" (ngSubmit)="onSearch(searchForm)">
+                <input id="lat" name="lat" type="text" placeholder="latitude" ngModel>
+                <input id="lng" name="lng" type="text" placeholder="longitude" ngModel>
+                <input id="start" name="start" type="text" placeholder="start date : YYYY-MM-DD" ngModel>
+                <input id="end" name="end" type="text" placeholder="end date : YYYY-MM-DD" ngModel>
+                <!-- <div class="usa-date-picker">
+                    <input class="usa-input" id="start-date" placeholder="start date" name="start-date" type="text" aria-describedby="start-date-label start-date-hint" ngModel>
+                </div>
+                <div class="usa-date-picker">
+                    <input class="usa-input" id="end-date" placeholder="end date" name="end-date" type="text" aria-describedby="end-date-label end-date-hint" ngModel>
+                </div> -->
+                <button>Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="grid-row grid-gap">
+        <div class="grid-col-12 desktop:grid-col-5 shadow-2 padding-3 desktop:margin-4" *ngFor='let earthquake of EarthQuakes'>
             <a href="{{earthquake.properties.url}}" target="_blank">
                 <h3>{{earthquake.properties.place}}</h3>
             </a>
             <p>Magnitude {{earthquake.properties.mag}}</p>
-            <p>Coordinates: {{earthquake.geometry.coordinates[0]}} lat, {{earthquake.geometry.coordinates[1]}} lng</p>
+            <p>Coordinates {{earthquake.geometry.coordinates[0]}} lng/ {{earthquake.geometry.coordinates[1]}} lat</p>
+            <p>Time {{this.timeConvert(earthquake.properties.time)}}</p>
         </div>
     </div>
 </div>

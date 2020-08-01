@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IEarthquake } from '../shared/models/IEarthquake';
 import { EarthquakesService } from './earthquakes.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-earthquakes',
@@ -10,15 +11,29 @@ import { EarthquakesService } from './earthquakes.service';
 export class EarthquakesComponent implements OnInit {
   EarthQuakes: IEarthquake[];
 
+
   constructor(private earthQuakeService: EarthquakesService) { }
 
   ngOnInit(): void {
     this.earthQuakeService.getEarthQuakes().subscribe(res => {
-      console.log(res.features);
       this.EarthQuakes = res.features;
     }, err => {
       console.log(err);
     });
   }
 
+  onSearch(searchForm: NgForm){
+    console.log(searchForm.value);
+    this.earthQuakeService.getSearchResults(searchForm.value.lat, searchForm.value.lng, searchForm.value.start, searchForm.value.end).subscribe( res => {
+      this.EarthQuakes = res.features;
+    }, err => {
+      console.log(err);
+    });
+  }
+
+  timeConvert(date: number){
+    const curdate = new Date(null);
+    curdate.setTime(date);
+    return curdate.toLocaleString();
+  }
 }
