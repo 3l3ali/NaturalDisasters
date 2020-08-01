@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { CoreModule } from './core/core.module';
 import { EarthquakesComponent } from './earthquakes/earthquakes.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { EarthquakesComponent } from './earthquakes/earthquakes.component';
     AppRoutingModule,
     HttpClientModule,
     HomeModule,
+    FormsModule,
     CoreModule
   ],
   providers: [],

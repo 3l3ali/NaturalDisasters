@@ -1,7 +1,9 @@
+import { Time } from '@angular/common';
+
 export interface IProperties {
     mag: number;
     place: string;
-    time: number;
+    time: string;
     updated: number;
     tz?: any;
     url: string;
