@@ -17,4 +17,4 @@ The Web App is Hosted on Netlify.
 
 ## 👇🏻 link 
 
-[nmu.netlify.app](https://nmu.netlify.app/)
+[naturaldisasters.netlify.app](https://naturaldisasters.netlify.app/)
