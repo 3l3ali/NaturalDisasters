@@ -7,11 +7,15 @@ import { HomeModule } from './home/home.module';
 import { CoreModule } from './core/core.module';
 import { EarthquakesComponent } from './earthquakes/earthquakes.component';
 import { FormsModule } from '@angular/forms';
+import { PreparedComponent } from './prepared/prepared.component';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EarthquakesComponent
+    EarthquakesComponent,
+    PreparedComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,11 @@
+@import '../../variables';
+
+.prepared-wrapper{
+    min-height: 80vh;
+    h1,h2{
+        color: $natural-blue;
+    }
+    a {
+        text-decoration: none;
+    }
+}
