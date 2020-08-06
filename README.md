@@ -1,4 +1,4 @@
-## 🔭 About  
+## 🌪 About  
 Angualr app that shows EarthQuakes data provided by U.S.GS earthquakes data API.
 
 ## 🔥 Technologies  
